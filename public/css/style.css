@@ -1,0 +1,70 @@
+h1,
+h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 7em;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.container-home {
+    background: url('../images/beach_one.jpeg');
+    background-attachment: fixed;
+    background-origin: content-box;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    opacity: .9;
+}
+
+.container-home h1 {
+    color: rgba(255,250,259,.9);
+    margin: 30vh auto 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,.9);
+}
+.container-home h2 {
+    color: rgba(100,100,109,1);
+    margin: -1vh auto 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,.9);
+}
+
+#about *{
+    _border: 1px solid red;
+}
+
+.container-about {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 30px auto 0;
+}
+
+.bio {
+    flex: auto;
+    order: 3;
+    flex-grow: 2;
+}
+
+.round {
+    border-radius: 50%;
+    width: 20em;
+    height: 20em;
+    flex: auto;
+    order: 2;
+    flex-grow: 1;
+    padding: 2em;
+}
+
+.container-tech span {
+    font-size: 5em;
+}

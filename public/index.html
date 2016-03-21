@@ -1,0 +1,148 @@
+<!doctype html>
+<html ng-app="mattstatesPortfolio">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="/scripts/app.js"></script>
+    <!-- STYLESHEETS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Matt States</title>
+</head>
+<body>
+    
+    
+    <nav class="navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/">Matt States</a>
+        </div>
+
+        <!-- Navigation links to add to the hamburger menu -->
+        <div class="collapse navbar-collapse" id="main-navigation">
+            
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://github.com/mattstates" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="http://codepen.io/mattstates/" target="_blank"><i class="fa fa-codepen"></i></a></li>
+                <li><a href="https://www.facebook.com/mstates" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://linkedin.com/in/mattstates
+" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="mailto:mattstates@icloud.com"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    
+    
+  
+    <div class="main" ng-controller="mainController">
+        
+        <div class="container-fluid container-home" id="home">
+            <h1>Matt States</h1>
+            <h2>Web Developer</h2>
+            <!--<h2><i class="fa fa-angle-down"></i></h2>-->
+        </div>
+        
+        <div class="container container-about" id="about">
+            <!--<h1>About:</h1>-->
+            <p class="bio">I am a lifelong-learner especially when it comes to new technology and applying as much as I can to my web development projects. I am great at bridging the communication gap that often exists between clients and developers. My experience in multi-platform marketing also brings added value to development projects I am involved with. I am currently available for full-time web development.</p>
+            <img class="round" src="/images/MattStates.jpg" title="Matt States" alt="Matt States">
+        </div>
+        
+        <div class="container-fluid container-tech">
+            <h1>Technologies:</h1>
+            
+            <span class="devicons devicons-git" title="git"></span>
+                <span class="devicons devicons-github_badge" title="GitHub"></span>
+                    <span class="devicons devicons-php" title="PHP"></span>
+                        <span class="devicons devicons-mysql" title="MySQL"></span>
+                            <span class="devicons devicons-javascript_badge" title="JavaScript"></span>
+                                <span class="devicons devicons-angular"  title="Angular"></span>
+            <span class="devicons devicons-jquery" title="jQuery"></span>
+                <span class="devicons devicons-Node.js" title="nodejs"></span>
+                    <span class="devicons devicons-css3" title="CSS3"></span>
+                        <span class="devicons devicons-bootstrap" title="Bootstrap"></span>
+                            <span class="devicons devicons-html5" title="HTML5"></span>
+                                <span class="devicons devicons-wordpress" title="WordPress"></span>
+            <span class="devicons devicons-npm" title="NPM"></span>
+                <span class="devicons devicons-codepen" title="CodePen"></span>
+                    <span class="devicons devicons-terminal" title="Terminal"></span>
+                        <span class="devicons devicons-mailchimp" title="MailChimp"></span>
+                            <span class="devicons devicons-mongodb" title="MongoDB"></span>
+                               <span class="devicons devicons-illustrator" title="Adobe Illustrator"></span>
+                                <span class="devicons devicons-photoshop" title="Adobe Photoshop"></span>
+                                
+                
+            
+        </div>
+        
+        <div class="container-fluid container-projects" id="projects">
+            <h1>Projects:</h1>
+            <h2> {{ name }} </h2>
+            
+            <!-- Button trigger modal 
+
+Trigger a modal for each project.
+-->
+<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>-->
+
+<!-- Modal -->
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+            
+            
+        </div>
+        
+        <div class="container container-contact" id="contact">
+            <h1>Contact:</h1>
+            <h2> {{ name }} </h2>
+        </div>
+        
+    </div>
+    
+    <div class="container-fluid container-footer" id="footer">
+            <h1>Footer:</h1>
+            <h2> {{ name }} </h2>
+    </div>
+    
+</body>
+</html>
