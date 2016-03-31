@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var favicon = require('serve-favicon');
 var path = require('path');
 var mongoose = require('mongoose');
 var pCod = require('./passcodes.js');
@@ -31,20 +32,16 @@ var uploadAPost = new Blogpost({
 app.set('view engine', 'ejs');
 
 app.use('/assets', express.static(__dirname + '/public'));
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 //Handle resquests and responses to the 'root'.
 app.get('/', function(req, res) {
     //res.sendFile(path.join(__dirname + 'index.html'));
     
-    if (req.url === '/favicon.ico') {
-    res.writeHead(200, {'Content-Type': 'image/x-icon'} );
-    res.end();
-    console.log('favicon requested');
-        
-    return;
-  }
     res.render('index', {});
 });
+
+
 
 app.get('/api', function(req, res) {
     
