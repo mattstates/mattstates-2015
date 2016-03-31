@@ -6,6 +6,7 @@ var pCod = require('./passcodes.js');
 //var database = require('./blogposts.js').database;
 var Blogpost = require('./blogposts.js').BlogPost;
 
+var port = process.env.PORT || 3000
 ///// USE THIS TO MANUALLY ADD POSTS TO THE DB ////
 var uploadAPost = new Blogpost({   
                                     title: 'Video Poker 2015',
@@ -47,6 +48,6 @@ app.get('/api', function(req, res) {
     
 });
 
-app.listen(3000, function() {
+app.listen(port, function() {
     console.log("this app is listening on port 3000!");
 });
