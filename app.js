@@ -35,6 +35,14 @@ app.use('/assets', express.static(__dirname + '/public'));
 //Handle resquests and responses to the 'root'.
 app.get('/', function(req, res) {
     //res.sendFile(path.join(__dirname + 'index.html'));
+    
+    if (req.url === '/favicon.ico') {
+    res.writeHead(200, {'Content-Type': 'image/x-icon'} );
+    res.end();
+    console.log('favicon requested');
+        
+    return;
+  }
     res.render('index', {});
 });
 
