@@ -1,0 +1,30 @@
+<div>
+    <div class="project-container" data-toggle="modal" data-target="#{{ project._id }}">
+        <h3>{{ project.title }}</h3>
+        <div class="project-image">
+            <img ng-src="{{project.imageurl}}" />
+        </div>
+        <div class="excerpt-text">
+            <p>{{ project.exerpt }}</p>
+        </div>
+    </div>
+    <div class="modal fade" id="{{ project._id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><p> {{ project.title }} </p></h4>
+                </div>
+                <div class="modal-body" ng-style="{
+    'background-image': 'url({{ project.imageurl }})',
+    'background-size': 'cover'
+    }">
+                    <p>{{ project.body }}</p>
+                </div>
+                <div class="modal-footer">
+                    <a target="_blank" ng-href="{{ project.siteURL }}" class="btn">{{ project.title }}</a> {{ project.siteURL }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
