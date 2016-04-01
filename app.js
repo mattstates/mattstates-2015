@@ -37,7 +37,6 @@ app.use(favicon(__dirname + '/public/images/favicon.ico'));
 //Handle resquests and responses to the 'root'.
 app.get('/', function(req, res) {
     //res.sendFile(path.join(__dirname + 'index.html'));
-    
     res.render('index', {});
 });
 
