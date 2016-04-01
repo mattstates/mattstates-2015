@@ -10,7 +10,8 @@ var port = process.env.PORT || 3000
 if(process.env.PORT) {
     
     var mlabUSER = process.env.mlabUSER;
-var mlabPASS = process.env.mlabPASS;
+    var mlabPASS = process.env.mlabPASS;
+    console.log(mlabPASS);
 }
 ///// USE THIS TO MANUALLY ADD POSTS TO THE DB ////
 var uploadAPost = new Blogpost({   

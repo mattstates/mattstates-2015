@@ -110,6 +110,4 @@ msPort.directive('msprojectElement', function() {
     }
 });
 
-console.log(msPort);
-console.log(msPort.directive($window));
 
