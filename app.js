@@ -16,14 +16,14 @@ if(process.env.PORT) {
 
 ///// USE THIS TO MANUALLY ADD POSTS TO THE DB ////
 var uploadAPost = new Blogpost({   
-                                    title: 'Video Poker 2015',
+                                    title: 'Simon App',
                                     author: 'Matt States',
-                                    date: 'July 2015',
-                                    body: 'This was a game I wanted to program from the ground up usign HTML, CSS, and JavaScript without any libraries or frameworks. I did borrow some CSS for the background textures and the textures for the poker chips, but the rest was done without so much as a Stack Overflow search. I should go through the code base and refactor it and spruce up the design overall. My main goal was to make it look good on iOS and I think I accomplished that.',
-                                    exerpt: 'A video poker game in vanilla JavaScript.',
+                                    date: 'February 2016',
+                                    body: 'This app was a project requirement for the Free Code Camp Front End Development Certificate. It is a throwback to the game Simon from the eighties.',
+                                    exerpt: 'The game Simon from the eighties in JavaScript!',
                                     techused: ['HTML', 'CSS', 'JavaScript'],
-                                    siteURL: 'http://musicpants.net/webapps/video-poker/',
-                                    imageurl: '/assets/images/videopoker2015.png'
+                                    siteURL: 'http://codepen.io/mattstates/full/xVGeyo',
+                                    imageurl: '/assets/images/simonapp.png'
                             });
 
 /*uploadAPost.save(function (err) {
