@@ -214,7 +214,6 @@ h1.tech-heading {
     padding: 15px;
     margin: 15px;
     background: rgba(71, 208, 201, 0.18);
-    _border-radius: 5px;
     cursor: pointer;
 }
 
@@ -256,35 +255,3 @@ h1.tech-heading {
     padding-top: 10px;
     text-align: center;
 }
-
-
-/*@media (max-width: 700px) {
-    .container-about,
-    .container-about * {
-        border: 1px solid red;
-    }
-    
-    .container-about {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: 30px auto 0;
-    }
-    .bio {
-        flex: auto;
-        order: 2;
-        flex-grow: 2;
-    }
-
-    .round {
-        border-radius: 50%;
-        width: 30em;
-        flex: auto;
-        order: 1;
-        flex-grow: 2;
-        margin: 0 auto;
-    }
-    
-}*/
