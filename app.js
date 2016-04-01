@@ -3,8 +3,7 @@ var app = express();
 var favicon = require('serve-favicon');
 var path = require('path');
 var mongoose = require('mongoose');
-var pCod = require('./passcodes.js');
-//var database = require('./blogposts.js').database;
+//var pCod = require('./passcodes.js');
 var Blogpost = require('./blogposts.js').BlogPost;
 
 var port = process.env.PORT || 3000
