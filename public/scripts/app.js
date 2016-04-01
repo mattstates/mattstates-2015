@@ -99,6 +99,7 @@ var msPort = angular.module('mattstatesPortfolio', []);
 msPort.controller('mainController', function($scope) {
     $scope.name = 'Matt States';
     $scope.projects = testArray;
+
 });
 
 msPort.directive('msprojectElement', function() {
@@ -108,4 +109,7 @@ msPort.directive('msprojectElement', function() {
         templateUrl: '/assets/directives/projects.html'
     }
 });
+
+console.log(msPort);
+console.log(msPort.directive($window));
 

@@ -1,9 +1,15 @@
 var mongoose = require('mongoose');
 
-var mongoDBProd = process.env.MONGOLAB_URI;
-if(!mongoDBProd) {
+//var mongoDBProd = process.env.MONGOLAB_URI;
+var mlabUSER = process.env.mlabUSER;
+var mlabPASS = process.env.mlabPASS;
+
+if(!mlabUSER) {
     var pCod = require('./passcodes.js');
-};
+} else {
+    var mongoDBProd = 'mongodb://'+mlabUSER+':'+mlabPASS+'@ds021299.mlab.com:21299/mattstates_homepage'
+}
+
     
 var blogpost = {
     
