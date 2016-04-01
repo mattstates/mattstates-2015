@@ -11,7 +11,7 @@ if(process.env.PORT) {
     var mlabUSER = process.env.mlabUSER;
     var mlabPASS = process.env.mlabPASS;
     console.log(mlabPASS);
-    console.log(mongoDBProd);
+    //console.log(mongoDBProd);
 }
 
 ///// USE THIS TO MANUALLY ADD POSTS TO THE DB ////

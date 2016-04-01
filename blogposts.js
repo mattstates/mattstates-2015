@@ -8,12 +8,11 @@ if(!mlabUSER) {
     var pCod = require('./passcodes.js');
 } else {
     var mongoDBProd = 'mongodb://'+mlabUSER+':'+mlabPASS+'@ds021299.mlab.com:21299/mattstates_homepage';
-    console.log(mongoDBProd);
+    console.log(mongoDBProd, 'from the blogpost.js file.');
 }
 
     
 var blogpost = {
-    
     //DATABASE CONNECTION
     database: mongoDBProd || mongoose.connect('mongodb://'+pCod.mongoDB.username+':'+pCod.mongoDB.password+'@ds021299.mlab.com:21299/mattstates_homepage'),
     //BLOG POST SCHEMA
