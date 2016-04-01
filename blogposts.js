@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
-if(!MONGOLAB_URI) {
+var mongoDBProd = process.env.MONGOLAB_URI;
+if(!mongoDBProd) {
     var pCod = require('./passcodes.js');
 };
     
@@ -8,7 +9,7 @@ var blogpost = {
     
     //DATABASE CONNECTION
     //database: mongoose.connect('mongodb://'+pCod.mongoDB.username+':'+pCod.mongoDB.password+'@ds021299.mlab.com:21299/mattstates_homepage'),
-    database: MONGOLAB_URI || mongoose.connect('mongodb://'+pCod.mongoDB.username+':'+pCod.mongoDB.password+'@ds021299.mlab.com:21299/mattstates_homepage'),
+    database: mongoDBProd || mongoose.connect('mongodb://'+pCod.mongoDB.username+':'+pCod.mongoDB.password+'@ds021299.mlab.com:21299/mattstates_homepage'),
     //BLOG POST SCHEMA
     BlogPost: mongoose.model('BlogPost', {    
                                     title: String,
