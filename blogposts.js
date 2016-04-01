@@ -7,8 +7,8 @@ var mlabPASS = process.env.mlabPASS;
 if(!mlabUSER) {
     var pCod = require('./passcodes.js');
 } else {
-    var mongoDBProd = 'mongodb://'+mlabUSER+':'+mlabPASS+'@ds021299.mlab.com:21299/mattstates_homepage';
-    console.log(mongoDBProd, 'from the blogpost.js file.');
+    var mongoDBProd = mongoose.connect('mongodb://'+mlabUSER+':'+mlabPASS+'@ds021299.mlab.com:21299/mattstates_homepage');
+    //console.log(mongoDBProd, 'from the blogpost.js file.');
 }
 
     
