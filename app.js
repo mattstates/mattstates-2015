@@ -8,11 +8,12 @@ var Blogpost = require('./blogposts.js').BlogPost;
 
 var port = process.env.PORT || 3000
 if(process.env.PORT) {
-    
     var mlabUSER = process.env.mlabUSER;
     var mlabPASS = process.env.mlabPASS;
     console.log(mlabPASS);
+    console.log(mongoDBProd);
 }
+
 ///// USE THIS TO MANUALLY ADD POSTS TO THE DB ////
 var uploadAPost = new Blogpost({   
                                     title: 'Video Poker 2015',
@@ -59,5 +60,5 @@ app.get('/api', function(req, res) {
 });
 
 app.listen(port, function() {
-    console.log("this app is listening on port 3000!");
+    console.log("this app is listening on port" + port + ".");
 });

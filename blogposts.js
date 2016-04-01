@@ -7,14 +7,14 @@ var mlabPASS = process.env.mlabPASS;
 if(!mlabUSER) {
     var pCod = require('./passcodes.js');
 } else {
-    var mongoDBProd = 'mongodb://'+mlabUSER+':'+mlabPASS+'@ds021299.mlab.com:21299/mattstates_homepage'
+    var mongoDBProd = 'mongodb://'+mlabUSER+':'+mlabPASS+'@ds021299.mlab.com:21299/mattstates_homepage';
+    console.log(mongoDBProd);
 }
 
     
 var blogpost = {
     
     //DATABASE CONNECTION
-    //database: mongoose.connect('mongodb://'+pCod.mongoDB.username+':'+pCod.mongoDB.password+'@ds021299.mlab.com:21299/mattstates_homepage'),
     database: mongoDBProd || mongoose.connect('mongodb://'+pCod.mongoDB.username+':'+pCod.mongoDB.password+'@ds021299.mlab.com:21299/mattstates_homepage'),
     //BLOG POST SCHEMA
     BlogPost: mongoose.model('BlogPost', {    
