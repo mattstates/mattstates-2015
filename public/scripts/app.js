@@ -21,5 +21,5 @@ msPort.directive('msprojectElement', function() {
     }
 });
 
-console.log('Thanks for checking out my site.\nI am always looking for constructive criticism so feel free to drop me a line at mattstates@icloud.com')
+console.log('Thanks for checking out my site.\nI am always looking for constructive criticism so feel free to drop me a line at matt@mattstates.com')
 

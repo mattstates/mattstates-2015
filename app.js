@@ -52,7 +52,7 @@ app.get('/api', function(req, res) {
             throw err;
         }
         res.send(posts);
-        console.log(posts);
+        //console.log(posts);
     });
     
 });
