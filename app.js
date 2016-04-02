@@ -10,12 +10,10 @@ var port = process.env.PORT || 3000
 if(process.env.PORT) {
     var mlabUSER = process.env.mlabUSER;
     var mlabPASS = process.env.mlabPASS;
-    console.log(mlabPASS);
-    //console.log(mongoDBProd);
 }
 
 ///// USE THIS TO MANUALLY ADD POSTS TO THE DB ////
-var uploadAPost = new Blogpost({   
+/*var uploadAPost = new Blogpost({   
                                     title: 'Simon App',
                                     author: 'Matt States',
                                     date: 'February 2016',
@@ -24,7 +22,7 @@ var uploadAPost = new Blogpost({
                                     techused: ['HTML', 'CSS', 'JavaScript'],
                                     siteURL: 'http://codepen.io/mattstates/full/xVGeyo',
                                     imageurl: '/assets/images/simonapp.png'
-                            });
+                            });*/
 
 /*uploadAPost.save(function (err) {
       if (err) {
