@@ -50,7 +50,8 @@ p {
 
 a,
 a:hover,
-a:visited {
+a:visited,
+a:focus {
     color: #A88373;
     text-decoration: none;
 }
