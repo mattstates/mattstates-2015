@@ -67,11 +67,10 @@ ul {
 /* ----------NAVIGATION---------------------- */
 
 .navbar-default {
-    background-color: rgba(200, 200, 200, .7);
+    background-color: rgba(255, 255, 255, .95);
     /* border-color: #e7e7e7; */
     position: fixed;
     width: 100%;
-    color: black;
     opacity: 1;
     z-index: 1;
     display: none;
@@ -88,6 +87,15 @@ ul {
 .navbar-collapse,
 .navbar-default .navbar-form {
     text-align: center;
+}
+
+a.navbar-brand {
+    opacity: .6;
+}
+
+.navbar-brand > img {
+    width: 45px;
+    margin: -9px auto 0;
 }
 
 
@@ -263,7 +271,11 @@ h1.tech-heading {
     }
     
     .container-about {
-        padding: 100px 0 0;
+        padding: 60px 0 30px;
+    }
+    
+    .round {
+        margin: 0 auto 30px;
     }
 }
 
