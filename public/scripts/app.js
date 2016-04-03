@@ -21,5 +21,18 @@ msPort.directive('msprojectElement', function() {
     }
 });
 
-console.log('Thanks for checking out my site.\nI am always looking for constructive criticism so feel free to drop me a line at matt@mattstates.com')
+$(window).scroll(function() {
+    
+    //console.log(this.scrollY);
+    if(this.scrollY > 100) {
+        $('#navbar').fadeIn(1000);
+    } /*else if (this.scrollY < 201) {
+        $('#navbar').fadeOut(500);
+    }*/
+});
+
+
+console.log('Thanks for checking out my site.\nI am always looking for constructive criticism so feel free to drop me a line at matt@mattstates.com');
+
+
 
