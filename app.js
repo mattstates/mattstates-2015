@@ -36,7 +36,7 @@ if(process.env.PORT) {
 app.set('view engine', 'ejs');
 
 app.use('/assets', express.static(__dirname + '/public'));
-app.use(favicon(__dirname + '/public/images/favicon_1.ico'));
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 //Handle resquests and responses to the 'root'.
 app.get('/', function(req, res) {
