@@ -1,17 +1,28 @@
 var msPort = angular.module('mattstatesPortfolio', []);
 
-msPort.controller('mainController', function($scope, $http) {
+msPort.controller('mainController', function($scope, $http, $location) {
     $http({
         method: 'GET',
         url: '/api'
     }).then(function successCallback(response) {
-        $scope.projects = response.data;
-  }, function errorCallback(response) {
-        console.log('There was an error retrieving data.');
-  });
+                $scope.projects = response.data;
+            }, function errorCallback(response) {
+                    console.log('There was an error retrieving data.');
+                });
     
     $scope.name = 'Matt States';
+    console.log($location)
 });
+
+//In Progress//
+msPort.controller('navControls', function($scope, $location) {
+    $scope.activeArea = function(viewPath) {
+        console.log(viewPath, $location.path().indexOf(viewPath));
+        console.log(0 == $location.path().indexOf(viewPath));
+        //return viewPath === "#" + $location.path();
+        return 0 == $location.path().indexOf(viewPath);
+    }
+})
 
 msPort.directive('msprojectElement', function() {
     return {

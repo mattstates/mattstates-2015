@@ -304,4 +304,10 @@ h1.tech-heading {
         font-size: 3.8rem;
 
     }
+    
+    .container-home-image {
+        background-size: initial;
+        background-position: bottom;
+        opacity: 1;
+    }
 }

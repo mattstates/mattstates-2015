@@ -22,7 +22,7 @@
 <body>
 
 
-    <nav class="navbar-default" id="navbar">
+    <nav class="navbar-default" id="navbar" ng-controller="navControls">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -42,17 +42,17 @@
             <div class="collapse navbar-collapse" id="main-navigation">
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li ng-class="{'active': activeArea('/')}"><a href="/">Home</a></li>
+                    <li ng-class="{active: activeArea('/#about')}" ng-click="{$location.path('/#about')}"><a href="#about" >About</a></li>
+                    <li ng-class="{active: activeArea('/#portfolio')}"><a href="#portfolio">Portfolio</a></li>
+                    <li ng-class="{active: activeArea('/#contact')}"><a href="#contact">Contact</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://github.com/mattstates" target="_blank"><i class="fa fa-github"></i></a></li>
-                    <li><a href="http://codepen.io/mattstates/" target="_blank"><i class="fa fa-codepen"></i></a></li>
-                    <li><a href="https://www.facebook.com/mstates" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://linkedin.com/in/mattstates
+                    <li><a title="GitHub" href="https://github.com/mattstates" target="_blank"><i class="fa fa-github"></i></a></li>
+                    <li><a title="CodePen" href="http://codepen.io/mattstates/" target="_blank"><i class="fa fa-codepen"></i></a></li>
+                    <li><a title="Facebook" href="https://www.facebook.com/mstates" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a title="LinkedIn" href="https://linkedin.com/in/mattstates
 " target="_blank"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="mailto:matt@mattstates.com"><i class="fa fa-envelope"></i></a></li>
                 </ul>
