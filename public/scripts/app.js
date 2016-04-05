@@ -1,6 +1,10 @@
 var msPort = angular.module('mattstatesPortfolio', []);
 
-msPort.controller('mainController', function($scope, $http, $location) {
+msPort.config(function($locationProvider) {
+    $locationProvider.html5Mode(true);
+});
+
+msPort.controller('mainController', ['$scope', '$http', '$location', function($scope, $http, $location) {
     $http({
         method: 'GET',
         url: '/api'
@@ -8,21 +12,21 @@ msPort.controller('mainController', function($scope, $http, $location) {
                 $scope.projects = response.data;
             }, function errorCallback(response) {
                     console.log('There was an error retrieving data.');
+                    console.log(response.statusText);
                 });
     
     $scope.name = 'Matt States';
-    console.log($location)
-});
+}]);
 
 //In Progress//
-msPort.controller('navControls', function($scope, $location) {
-    $scope.activeArea = function(viewPath) {
-        console.log(viewPath, $location.path().indexOf(viewPath));
-        console.log(0 == $location.path().indexOf(viewPath));
-        //return viewPath === "#" + $location.path();
-        return 0 == $location.path().indexOf(viewPath);
+msPort.controller('navControls', ['$scope', '$location', '$window', '$timeout', function($scope, $location, $window, $timeout) {
+    
+    $scope.scrollTo = function(viewID) {
+        angular.element('body').animate({
+            scrollTop: angular.element(viewID)[0].offsetTop
+        }, 1000, 'swing');
     }
-})
+}]);
 
 msPort.directive('msprojectElement', function() {
     return {
@@ -32,16 +36,34 @@ msPort.directive('msprojectElement', function() {
     }
 });
 
+function removeActive() {
+    $('.navbar-left li').removeClass('active');
+}
+removeActive();
 $(window).scroll(function() {
     
-    //console.log(this.scrollY);
-    if(this.scrollY > 100) {
-        $('#navbar').fadeIn(1000);
-    } /*else if (this.scrollY < 201) {
-        $('#navbar').fadeOut(500);
-    }*/
-});
+    setTimeout(function() {
+            if(this.scrollY > 100) {
+                $('#navbar').fadeIn(1000);
+            }
+                    
+            if(this.scrollY < $('#about').offset().top) {
+                removeActive();
+                $('.li-home').addClass('active');
+            } else if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                removeActive();
+                $('.li-contact').addClass('active');
+            } else if(this.scrollY < $('#portfolio').offset().top) {
+                removeActive();
+                $('.li-about').addClass('active');
+            } else if(this.scrollY < $('#contact').offset().top) {
+                removeActive();
+                $('.li-portfolio').addClass('active');
+            } 
 
+        }, 200)
+
+});
 
 console.log('Thanks for checking out my site.\nI am always looking for constructive criticism so feel free to drop me a line at matt@mattstates.com');
 

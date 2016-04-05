@@ -203,6 +203,9 @@ h1.tech-heading {
 
 
 /* ----------PROJECTS---------------------- */
+.projects-heading {
+    padding: 65px 0 0;
+}
 
 .container-projects {
     display: flex;

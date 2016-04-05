@@ -39,10 +39,15 @@ app.use('/assets', express.static(__dirname + '/public'));
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 //Handle resquests and responses to the 'root'.
-app.get('/', function(req, res) {
+var sendHomePage = function(req, res) {
     //res.sendFile(path.join(__dirname + 'index.html'));
     res.render('index', {});
-});
+}
+
+app.get('/', sendHomePage);
+app.get('/about', sendHomePage);
+app.get('/portfolio', sendHomePage);
+app.get('/contact', sendHomePage);
 
 app.get('/api', function(req, res) {
     
