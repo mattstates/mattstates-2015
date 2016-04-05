@@ -22,7 +22,7 @@ msPort.controller('mainController', ['$scope', '$http', '$location', function($s
 msPort.controller('navControls', ['$scope', '$location', '$window', '$timeout', function($scope, $location, $window, $timeout) {
     
     $scope.scrollTo = function(viewID) {
-        angular.element('body').animate({
+        angular.element('body,html').animate({
             scrollTop: angular.element(viewID)[0].offsetTop
         }, 1000, 'swing');
     }
@@ -38,8 +38,9 @@ msPort.directive('msprojectElement', function() {
 
 function removeActive() {
     $('.navbar-left li').removeClass('active');
+    $('.navbar-left li > a').blur();
 }
-removeActive();
+
 $(window).scroll(function() {
     
     setTimeout(function() {
@@ -49,16 +50,16 @@ $(window).scroll(function() {
                     
             if(this.scrollY < $('#about').offset().top) {
                 removeActive();
-                $('.li-home').addClass('active');
+                $('.li-home').addClass('active').focus();
             } else if ($(window).scrollTop() + $(window).height() == $(document).height()) {
                 removeActive();
-                $('.li-contact').addClass('active');
+                $('.li-contact').addClass('active').focus();
             } else if(this.scrollY < $('#portfolio').offset().top) {
                 removeActive();
                 $('.li-about').addClass('active');
             } else if(this.scrollY < $('#contact').offset().top) {
                 removeActive();
-                $('.li-portfolio').addClass('active');
+                $('.li-portfolio').addClass('active').focus();
             } 
 
         }, 200)
