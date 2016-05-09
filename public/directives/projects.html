@@ -19,9 +19,12 @@
     'background-image': 'url({{ project.imageurl }})',
     'background-size': 'cover'
     }"> -->
-                    
+
                     <div class="modal-body">
                     <p>{{ project.body }}</p>
+                    <blockquote>Technologies Used:<br>
+                      <span ng-repeat="tech in project.techused">{{tech}} </span>
+                    </blockquote>
                 </div>
                 <div class="modal-footer">
                     <a target="_blank" ng-href="{{ project.siteURL }}" class="btn">{{ project.title }}</a> {{ project.siteURL }}

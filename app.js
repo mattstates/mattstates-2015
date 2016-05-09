@@ -13,24 +13,24 @@ if(process.env.PORT) {
 }
 
 ///// USE THIS TO MANUALLY ADD POSTS TO THE DB ////
-/*var uploadAPost = new Blogpost({   
-                                    title: 'Simon App',
-                                    author: 'Matt States',
-                                    date: 'February 2016',
-                                    body: 'This app was a project requirement for the Free Code Camp Front End Development Certificate. It is a throwback to the game Simon from the eighties.',
-                                    exerpt: 'The game Simon from the eighties in JavaScript!',
-                                    techused: ['HTML', 'CSS', 'JavaScript'],
-                                    siteURL: 'http://codepen.io/mattstates/full/xVGeyo',
-                                    imageurl: '/assets/images/simonapp.png'
-                            });*/
+// var uploadAPost = new Blogpost({
+//                                     title: 'Markdown Previewer',
+//                                     author: 'Matt States',
+//                                     date: 'May 2016',
+//                                     body: 'This app will allow you to format text in real time from a text area input. The markdown preview uses the same markdown rules used at GitHub. You can see this kind of text input implemented on sites that accept user posts–an example would be Reddit',
+//                                     exerpt: 'Type plain text while following some simple formatting rules and see the results update dynamically.',
+//                                     techused: ['HTML', 'SCSS', 'JavaScript', 'React.js', 'Marked.js', 'Babel.js', 'Bootstrap', 'React-DOM.js'],
+//                                     siteURL: 'http://codepen.io/mattstates/full/JXwmjp',
+//                                     imageurl: '/assets/images/markdownpreviewer.png'
+//                             });
 
-/*uploadAPost.save(function (err) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log('Post was uploaded to the database.');
-      };
-});*/
+// uploadAPost.save(function (err) {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         console.log('Post was uploaded to the database.');
+//       };
+// });
 ///// END USE THIS TO MANUALLY ADD POSTS TO THE DB ////
 
 app.set('view engine', 'ejs');
@@ -50,16 +50,16 @@ app.get('/portfolio', sendHomePage);
 app.get('/contact', sendHomePage);
 
 app.get('/api', function(req, res) {
-    
+
     Blogpost.find({author: 'Matt States'}, function(err, posts) {
         if (err) {
             console.log(err);
             throw err;
         }
-        res.send(posts);
+        res.send(posts.sort());
         //console.log(posts);
     });
-    
+
 });
 
 app.listen(port, function() {

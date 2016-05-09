@@ -244,7 +244,7 @@ h1.tech-heading {
 
 .project-image {
     height: 40vh;
-    max-height: 400px;
+    max-height: 16vw;
     overflow: hidden;
     border: 5px solid white;
     border-left: none;
@@ -272,11 +272,11 @@ h1.tech-heading {
     ul.contacts {
         text-align: center;
     }
-    
+
     .container-about {
         padding: 60px 0 30px;
     }
-    
+
     .round {
         margin: 0 auto 30px;
     }
@@ -286,6 +286,10 @@ h1.tech-heading {
     body {
         font-size: 14px;
     }
+    .project-image {
+        height: 40vh;
+        max-height: inherit;
+      }
 }
 
 
@@ -307,7 +311,7 @@ h1.tech-heading {
         font-size: 3.8rem;
 
     }
-    
+
     .container-home-image {
         background-size: initial;
         background-position: bottom;
